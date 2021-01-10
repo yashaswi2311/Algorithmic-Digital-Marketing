@@ -9,20 +9,6 @@ This work was published in: 2017 AdKDD & TargetAd Workshop, in conjunction with 
 
 When using this dataset, please cite the paper with following bibtex(final ACM bibtex coming soon):
 
-```json
-@inproceedings{DiemertMeynet2017,
-author = {{Diemert Eustache, Meynet Julien} and Galland, Pierre and Lefortier, Damien},
-title={Attribution Modeling Increases Efficiency of Bidding in Display Advertising},
-publisher = {ACM},
-pages={To appear},
-booktitle = {Proceedings of the AdKDD and TargetAd Workshop, KDD, Halifax, NS, Canada, August, 14, 2017},
-year = {2017}
-}
-```
-
-We would love to hear from you if use this data or plan to use it. Refer to the Contact section below.
-
-
 ## Content of this dataset
 This dataset includes following files:
 

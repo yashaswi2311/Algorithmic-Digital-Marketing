@@ -1,0 +1,117 @@
+<html>
+<head>
+<style>
+body {
+  line-height: 1.7;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Lato"
+  
+}
+p {
+    color: white;
+}
+.header {
+    text-align: center;
+}
+.header a {
+    color: #c72681;
+}
+
+.header form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header form input {
+    width: 200px;
+    height: 20px;
+}
+.header form button {
+    width: 100px;
+    height: 20px;
+}
+.main {
+    width: 100%;
+    overflow: hidden; 
+}
+.book {
+    width: 300px;
+    height: 380px;
+    float:left; 
+    text-align: center;
+}
+.book img {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 278px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #000;
+}
+
+.topnav a {
+  float: left;
+  color: #e3ffe4;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ddd;
+  color: white;
+}
+</style>
+      
+<title>Book Search</title>
+</head>
+    <body>
+        <div class="topnav" style="">
+           <a class="active" href="#home">HOME</a>
+           <a href="/topbooks.html">TOP BOOKS</a>
+           <a href="/bookanalysis.html">BOOK ANALYSIS</a>
+           <a href="/about.html">ABOUT</a>
+        </div>
+        <div class="header">
+          <h2 class="title"><a href="/" style="text-decoration:none;color: #000;font-size :40px">The Book Hub</a></h2>
+          <form action="{{ url_for('search_book') }}" method="get">
+            <input type="text" name="search_field" placeholder="Search.."style="width: 25%; height: 40px; background: white;font-size: 15px;border:  solid grey;">
+            <button id='submit' type="submit" style="width: 5%;height: 40px;background: #000;color: white;font-size: 15px;border: solid grey;border-left: none;">Submit</button>
+          </form>
+          <p style="color: #000;font-size :25px">The books we love the most !! </p><br/>
+        </div>
+
+        <div class="main">
+          {% for book in books %} 
+          <div id="{{ book['isbn'] }}" class="book">
+            <a href='https://www.goodreads.com/book/show/{{ book["goodreads_book_id"] }}'>
+              <img id='book_image' src="{{ book['image_url'] }}"/>
+              {{ book['title'] }}<br/>
+            </a>
+            <!-- {{ book['title'] }}<br/> -->
+
+            <a href="{{ url_for('book_recommendations', id_goodreads=book['goodreads_book_id']) }}">Recommend Similar Books</a>
+          </div>
+          {% endfor %}
+        </div>
+        <footer style = "position: fixed; left: 0; bottom: 0; width: 100%; background-color: #000 ;color: black;  text-align: center;">
+            <a href="https://www.linkedin.com/in/yashaswi-singh1/" style="text-decoration:none; color:white;">Author : Yashaswi Singh </a> |
+            <a href="mailto:singh.ya@northeastern.edu" style="text-decoration:none; color:white;">Email</a> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/siddhant-mehta7/" style="text-decoration:none; color:white;">Author : Siddhant Mehta </a> |
+             <a href="mailto:mehta.sidd@northeastern.edu" style="text-decoration:none; color:white;">Email </a>
+        </footer>
+    </body>
+	
+</html>

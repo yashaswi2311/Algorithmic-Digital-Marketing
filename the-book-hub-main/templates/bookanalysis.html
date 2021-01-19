@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+body {
+background-color:  #efeff5;
+font-size: 1rem;
+font-family: "Lato"
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #000;
+}
+
+.topnav a {
+  float: left;
+  color: #e3ffe4;
+  /*text-align: center;*/
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ddd;
+  color: white;
+}
+</style>
+
+	<title> Book Analysis </title>
+</head>
+<body>
+	<div class="topnav">
+           <a href="/">HOME</a>
+           <a href="#topratedbooks">TOP RATED BOOKS</a>
+           <a href="#topauthors">TOP AUTHORS</a>
+           <a href="/about.html">ABOUT</a>
+        </div>
+
+	<div class = "top_rated_books">
+
+		<iframe id="topbooks" scrolling="yes" style="border:none; display: block; margin-left: auto; margin-right: auto;" seamless="seamless" src="https://plotly.com/~yashaswi2092/7.embed" height="720" width="100%"></iframe>
+		<h2 style="font-size :25px; text-align: center;">Top Rated Books in a tree format </h2><br/>
+
+		<iframe id="topratedbooks" scrolling="yes" style="border:none;display: block; margin-left: auto; margin-right: auto;" seamless="seamless" src="https://plotly.com/~yashaswi2092/5.embed" height="720"width="90%"></iframe>
+	</div>
+
+	<div class = "top_rated_books">
+		<h2 style="font-size :25px; text-align: center;">Top Authors</h2>
+		<iframe id="topauthors" scrolling="yes" style="border:none;display: block; margin-left: auto; margin-right: auto;" seamless="seamless" src="https://plotly.com/~yashaswi2092/9.embed" height="720" width="90%"></iframe>
+	</div>
+
+	<div class = "top_rated_books">
+		<iframe id="topauthorstree" scrolling="yes" style="border:none;display: block; margin-left: auto; margin-right: auto;" seamless="seamless" src="https://plotly.com/~yashaswi2092/11.embed" height="720" width="90%"></iframe>
+	</div>
+
+</body>
+</html>
